@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Carrossel de 25 Imagens</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background: #f0f0f0;
+    }
+
+    .carousel {
+      position: relative;
+      width: 600px;
+      height: 400px;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .carousel-images {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+      width: calc(600px * 25); /* Corrigido para caber 25 imagens */
+    }
+
+    .carousel-images img {
+      width: 600px;
+      height: 400px;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+
+    .carousel button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      cursor: pointer;
+      font-size: 18px;
+      border-radius: 5px;
+      z-index: 1;
+    }
+
+    .prev {
+      left: 10px;
+    }
+
+    .next {
+      right: 10px;
+    }
+
+    .carousel button:hover {
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="carousel">
+    <div class="carousel-images" id="carousel-images">
+      <!-- 25 imagens fixas -->
+      <!-- Você pode trocar os links pelas suas imagens -->
+      <img src="https://via.placeholder.com/600x400?text=Imagem+1" alt="Imagem 1">
+      <img src="https://via.placeholder.com/600x400?text=Imagem+2" alt="Imagem 2">
+      <img src="https://via.placeholder.com/600x400?text=Imagem+3" alt="Imagem 3">
+      <img src="https://via.placeholder.com/600x400?text=Imagem+4" alt="Imagem 4">
+      <img src="https://via.placeholder.com/600x400?text=Imagem+5" alt="Imagem 5">
+      <img src="https://via.placeholder.com/600x400?text=Imagem+6" alt="Imagem 6">
+      <img src="https://via.placeholder.com/600x400?text=Imagem+7" alt="Imagem 7">
+      <img src="https://via.placeholder.com/600x400?text=Imagem+8" alt="Imagem 8">
+      <img src="https://via.placeholder.com/600x400?text=Imagem+9" alt="Imagem 9">
+      <img src="https://via.placeholder.com/600x400?text=Imagem+10" alt="Imagem 10">
+      <img src="https://via.placeholder.com/600x400?text=Imagem+11" alt="Imagem 11">
+      <img src="https://via.placeholder.com/600x400?text=Imagem+12" alt="Imagem 12">
+      <img src="https://via.placeholder.com/600x400?text=Imagem+13" alt="Imagem 13">
+      <img src="https://via.placeholder.com/600x400?text=Imagem+14" alt="Imagem 14">
+      <img src="https://via.placeholder.com/600x400?text=Imagem+15" alt="Imagem 15">
+      <img src="https://via.placeholder.com/600x400?text=Imagem+16" alt="Imagem 16">
+      <img src="https://via.placeholder.com/600x400?text=Imagem+17" alt="Imagem 17">
+      <img src="https://via.placeholder.com/600x400?text=Imagem+18" alt="Imagem 18">
+      <img src="https://via.placeholder.com/600x400?text=Imagem+19" alt="Imagem 19">
+      <img src="https://via.placeholder.com/600x400?text=Imagem+20" alt="Imagem 20">
+      <img src="https://via.placeholder.com/600x400?text=Imagem+21" alt="Imagem 21">
+      <img src="https://via.placeholder.com/600x400?text=Imagem+22" alt="Imagem 22">
+      <img src="https://via.placeholder.com/600x400?text=Imagem+23" alt="Imagem 23">
+      <img src="https://via.placeholder.com/600x400?text=Imagem+24" alt="Imagem 24">
+      <img src="https://via.placeholder.com/600x400?text=Imagem+25" alt="Imagem 25">
+    </div>
+    <button class="prev" onclick="prevSlide()">❮</button>
+    <button class="next" onclick="nextSlide()">❯</button>
+  </div>
+
+  <script>
+    const carousel = document.getElementById('carousel-images');
+    const totalImages = carousel.children.length;
+    let currentIndex = 0;
+
+    function updateCarousel() {
+      const offset = -currentIndex * 600;
+      carousel.style.transform = `translateX(${offset}px)`;
+    }
+
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % totalImages;
+      updateCarousel();
+    }
+
+    function prevSlide() {
+      currentIndex = (currentIndex - 1 + totalImages) % totalImages;
+      updateCarousel();
+    }
+  </script>
+
+</body>
+</html>
+
+
+
+titulo do trabalho geral: por onde for, plante amor!-
+"O bullying não me define."
+SUB titulo- Cozinhando oportunidades
+Capa
+
+   receita da pizza da empatia
+
+Imagem dos processos
+
+Nome dos integrantes
+---
+====RECEITAS====
+*PIZZA DA EMPATIA*
+
+-ingredientes-                        |
+                                      **|**
+
+60 gramas de paciência                |
+500 ml de respeito		      |
+120 ml de empatia
+3 colheres de sopa de solidariedade   |
+1 colher de chá de boas amizades      |
+1 kg de bondade                       |
+° modo de preparo°
+
+Primeiramente, dissolva o paciência com o solidariedade , coloque o respeito , a
+empatia  e vá adicionando bondade aos poucos, coloque as boas amizades no meio e mexa tudo com amor.
+
+Então, sove a massa até que ela fique bem lisa , usando sempre a bondade aos poucos para que a massa não fique dura.
+
+Portanto, quando estiver no ponto, deixe a massa descansar por 30 minutos.
+
+Abra com o rolo e além disso, faça discos finos.
+
+Por fim, asse por 10 minutos, retire, coloque o recheio de sua preferência e volte ao forno por 15 minutos.
+
+==============================================================================================================================
+ Bolo da solidariedade
+
+Massa do bolo:
+
+3 pitadas de alegria
+
+3 doses de esperança
+
+1 xícara de coragem
+
+2 xícaras de bondade
+
+2 e 1/2 xícaras de humildade
+
+1 colher de sopa de confiança
+
+Cobertura de motivação:
+
+4 colheres de sopa de grandes amizades
+
+2 colheres de sopa de carinho
+
+3 colheres de sopa de acolhimento
+
+5 colheres de sopa de amor
+
+Modo de preparo
+
+Separe à alegria e corte em pedaços pequenos, deixando-a leve e pronta para se misturar.
+
+No liquidificador da vida, bata a alegria, a esperança e a coragem até formar um creme cheio de luz.
+
+Em uma tigela, peneire a bondade e a humildade, para que fiquem bem leves.
+
+Junte o creme batido com a mistura peneirada e acrescente a confiança, mexendo com calma até tudo se abraçar em harmonia.
+
+Leve essa massa de sentimentos para assar no forno do tempo, até que cresça e exale um cheiro de paz.
+
+Cobertura de motivação
+
+Em uma panela no fogo brando do coração, misture a amizade, o carinho, o acolhimento e o amor.
+
+Mexa até tudo se unir em um brilho quente e aconchegante.
+
+Espalhe essa calda sobre o bolo já pronto e deixe escorrer lentamente, cobrindo cada pedaço de vida.
